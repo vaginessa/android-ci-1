@@ -1,19 +1,12 @@
-package com.app.telerik.ciapp;
+package com.app.telerik.common;
 
 import android.content.Context;
-import android.support.design.widget.NavigationView;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
 
-import org.hamcrest.Matcher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
 
 /**
@@ -28,7 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        onView(withId(R.id.button)).perform(click());
-        assertEquals("com.app.telerik.ciapp", appContext.getPackageName());
+        assertEquals("com.app.telerik.common.test", appContext.getPackageName());
     }
 }
